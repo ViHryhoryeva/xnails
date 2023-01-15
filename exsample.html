@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+        /* радиокнопки скрыты */
+        .radio-folder
+        {
+            display: none;
+        }
+    
+        /* но их метки видны и выстраиваются в линейку */
+        .radio-folder + label
+        {
+            float: left;
+            background-color: #aaaaaa;
+            display: block;
+            margin-right: 5px;
+            padding: 0 10px 0 10px;
+            border-radius: 10px 10px 0 0;
+            line-height: 2em;
+        }
+    
+        /* самая первая метка - с отступом слева */
+        .radio-folder:first-child + label
+        {
+            margin-left: 10px;
+        }
+    
+        /* метка выбранной радиокнопки - голубой фон */
+        .radio-folder:checked + label
+        {
+            background-color: cyan;
+        }
+    
+        /* все контенты обычно не видны */
+        .radio-folder + label + div
+        {
+            display: none;
+        }
+    
+        /* контент выбранной радиокнопки виден */
+        .radio-folder:checked + label + div
+        {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 2em;
+            min-width: 20em;
+            background-color: cyan;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div style='position: relative'>
+
+        <input type=radio name="folder" id="folder1" checked class="radio-folder">
+        <label for="folder1">первая строфа</label>
+        <div>
+            Однажды в студёную зимнюю пору<br />
+            Я из лесу вышел &mdash; был сильный мороз!
+        </div>
+    
+        <input type=radio name="folder" id="folder2" class="radio-folder">
+        <label for="folder2">вторая и третья строфа</label>
+        <div>
+            Гляжу &mdash; поднимается медленно в гору<br />
+            лошадка, везущая хворосту воз.<br />
+            И шествуя рядом, в спокойствии чинном,<br />
+            Лошадку ведёт под уздцы мужичок.
+        </div>
+    
+    </div>
+
+
+
+
+</body>
+</html>

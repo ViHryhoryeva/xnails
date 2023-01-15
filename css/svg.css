@@ -1,0 +1,28 @@
+@import url(https://fontawesome.com);
+.icon {
+    display: inline;
+}
+.insta {
+    width: 30px;
+    position: absolute;
+    left: 135px;
+    top: 100px;
+}
+.facebook {
+    position: absolute;
+    width: 19px;
+    left: 175px;
+    top: 100px;
+}
+.vk {
+    width: 30px;
+    position: absolute;
+    left: 210px;
+    top: 100px;
+}
+.mail {
+    width: 35px;
+    position: absolute;
+    left: 250px;
+    top: 100px;
+}
