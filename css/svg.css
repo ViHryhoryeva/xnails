@@ -1,28 +1,22 @@
 @import url(https://fontawesome.com);
+.footer_svg {
+    grid-column: 1;
+    grid-row: 1;
+}
 .icon {
-    display: inline;
+    list-style-type: none;
+    padding-top: 80px;
 }
-.insta {
-    width: 30px;
-    position: absolute;
-    left: 135px;
-    top: 100px;
+.icon li {
+    display: inline-block;
 }
-.facebook {
-    position: absolute;
-    width: 19px;
-    left: 175px;
-    top: 100px;
-}
+.insta,
 .vk {
     width: 30px;
-    position: absolute;
-    left: 210px;
-    top: 100px;
+}
+.facebook {
+    width: 19px;
 }
 .mail {
-    width: 35px;
-    position: absolute;
-    left: 250px;
-    top: 100px;
+    width: 35px;  
 }
