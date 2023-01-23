@@ -1,0 +1,44 @@
+
+.sertificate_description {
+    max-width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    padding-top: 180px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.points {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+}
+.points h4 {
+    margin-bottom: 20px;
+    color: black;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+div.h4_1:checked + div {
+    border-bottom: solid gray 1px;
+}
+.detailed_description {
+    grid-column: 2;
+    grid-row: 1;
+}
+.detailed_description p {
+    margin-bottom: 20px;
+}
+.conditions {
+    font-weight: bold;
+}
+.conditions_2 {
+    white-space: pre-wrap;
+    
+}
