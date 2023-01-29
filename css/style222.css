@@ -18,109 +18,227 @@ time, mark, audio, video {
 }
 html {
     box-sizing: border-box;
+    min-width: 320px;
 }
 body {
     background: #FFFAF3;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 300;
-    /* font-size: 18px; */
-    font-size: calc(13px + (18 - 13) * ((100vw - 100px) / (1440 - 320)));
+    font-size: 18px;
     line-height: 150%;
     color: black;
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
 }
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
+a {
+    color: black;
+}
 a:hover {
     color: black;
     text-decoration: none;
 }
+.wrapper_of_all {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 135px;
+}
 
+@media only all and (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+    .wrapper_of_all {
+        min-width: 320px;
+        width: 100%;
+        /* max-width: 800px; */
+        padding: 0 20px; 
+    }
+}
+@media only all and (max-width: 450px) {
+    body {
+        font-size: 13px;
+    }
+    .wrapper_of_all {
+        min-width: 320px;
+        width: 100%;
+        /* max-width: 450px; */
+        padding: 0 10px; 
+    }
+}
+.buttons,
+.button_1 { 
+    border: solid black 1px;
+    padding: 10px 18px;
+    width: 170px;
+    height: 50px;
+    background-color: #FFFAF3;
+    text-transform: uppercase;
+    text-align: center;
+}
+.buttons:hover,
+.button_1:hover,
+.menu_link_button_inside:hover {
+    background-color: #D4DCB2;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 97px;
+}
+h2 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 87px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+}
+.modal-title {
+    font-weight: bold;
+}
+.modal-body label {
+    font-style: italic;
+}
+.button_input_text,
+.button_input_tel {
+    width: 100%;
+    margin: 10px 0;
+    background-color:#FFFAF3;
+    border: solid #565e64 1px;
+}
+.input_submit {
+    background-color: #d3d3d3;
+    border: solid #6c757d 1px;
+    padding: 6px 10px;
+    position: absolute;
+    bottom: -58px;
+    right: 130px;
+}
+.input_submit:hover {
+    background-color: #212529;
+    color: white;
+    opacity: 0.5;
+}
+@media only all and (max-width: 900px) {
+    h1 {
+        font-size: 64px;
+        line-height: 78px;
+    }
+    h2 {
+        font-size: 55px;
+        line-height: 67px;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    /* .button,
+    .button_1 {
+        width: 145px;
+        height: 39px;
+    } */
+    .btn {
+        font-size: 16px;
+    }
+}
+@media only all and (max-width: 450px) {
+    h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .buttons,
+    .button_1 {
+        width: 195px;
+        height: 50px;
+    }
+}
+    /* Модальное окно */
+.btn {
+    color: black;
+    border-radius: 0;
+    font-size: 18px;
+}
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(131, 239, 183, 0.25);
+}
+.modal-content {
+    background-color: #FFFAF3;
+}
+.btn-secondary {
+    background-color: #d3d3d3;
+}
     /* Шапка */
 .head {
     background-color: #FFFAF3;
+    position: sticky;
     left: 0;
     top: 0;
-    max-width: 1200px;
-    width: 100%;
     z-index: 2;
-    position: sticky;
     margin: 0 auto;
 }
-/* .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;    
-} */
 .header_wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    /* justify-content: space-between; */
     padding-top: 40px;
-    height: 100%;
-    width: 100%;
-    /* padding-top: calc(20px + (40 - 20)*((100vw - 320px)/(1200 - 320))); */
-}
-.header_logo {
-    width: 143px;
-    height: 39px;
-    font-size: 0rem;
-    display: grid;
-    grid-template-columns: 170px;
-    grid-template-rows: 25px 14px;
-    justify-items: center;
+    max-width: 1200px;
 }
 .logo_link,
 .menu_link,
-.menu_link_buttom {
+.menu_link_button {
     text-decoration: none;
-    color: black;
 }
-.logo_link {
-    position: relative;
+.header_logo {
+    max-width: 144px;
 }
-a.logo_link ~ img {
-    grid-column: 1;
-    grid-row: 1;
-}
-div.header_logo span {
-    grid-column: 1;
-    grid-row: 2;
-    font-size: 10px;
-    font-weight: bold;
+.header_logo a.logo_link svg {
+    width: 90%;
 }
 .menu_nav {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
     list-style-type: none;
-    color: black;
     justify-items: center;
-    width: 100%;
-    height: 100%;
 }
 .menu_nav a {
-    padding: 30px;
+    padding: 15px;
 }
-
-
-
 #menu__toggle {
     opacity: 0;
 }
-
-@media only all and (max-width: 770px) {
-body {
-    margin: 0 auto;
+.menu_link_button_inside,
+.logo_link_burger {
+    display: none;
 }
 
+@media only all and (max-width: 1100px) {
     .header_logo, 
     .menu_link_button {
         margin: 0 auto;
@@ -135,8 +253,8 @@ body {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 40px;
+    left: 30px;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -169,7 +287,7 @@ body {
     top: 0;
     left: -100%;
     width: 300px;
-    height: 700px;
+    height: 650px;
     margin: 0;
     padding: 80px 0;
     list-style: none;
@@ -182,7 +300,6 @@ body {
     display: block;
     padding: 12px 24px;
     color: #333;
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -190,7 +307,10 @@ body {
 .menu_link:hover {
     background-color: black;
 }
-  #menu__toggle:checked ~ .menu__btn > span {
+.logo_link_burger {
+    text-align: center;
+}
+#menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
 }
 #menu__toggle:checked ~ .menu__btn > span::before {
@@ -218,63 +338,68 @@ body {
     transition-duration: .25s;
 }
 }
-
-
-
-
-
-
-/* .menu_item {
-    margin: 0 30px;
-} */
-.menu_link_button {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    border: solid black 1px;
-    align-items: center;
-    padding: 5px 20px;
-    width: 140px;
-    height: 40px;
-    background-color: #FFFAF3;
-}
-.menu_link_button:hover {
-    background-color: #D4DCB2;
+.menu_link_button_inside {
+    display: none;
 }
 
-
-
-
-
-
-
-
+@media only all and (max-width: 900px) {
+    .menu_link_button {
+        width: 140px;
+    }
+}
+@media only all and (max-width: 450px) {
+    
+    .menu_link_button {
+        display: none;
+    }
+    .menu_link_button_inside {
+        display: block;
+        border: solid black 1px;
+        align-items: center;
+        padding: 5px 20px;
+        width: 170px;
+        height: 47px;
+        background-color: #FFFAF3;
+        text-transform: uppercase;
+    }
+    .button_1 {
+        display: none;
+    }
+    .menu_item .menu_link_button_inside {
+        margin-left: 66px;
+    }
+    .input_submit {
+        font-size: 18px;
+        padding: 10px 14px;
+    }
+    .logo_link {
+        text-align: right;
+    }
+}
+    
 
 /* XNAILS - студии маникюра в Минске */
-.container_1 {
-    margin: 0 auto;
-    max-width: 1200px;  
+.content_1 {
+    max-height: 1280px;
 }
 .block {
     display: grid; 
     grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
     grid-template-rows: 0.3fr 0.3fr 0.2fr 0.3fr;
-    /* margin-top: 80px; */
+    align-items: end;
 }
 .text1 {
     grid-column: 1 / 5;
     grid-row: 1;
     padding-top: 80px;
+    order: 1;
 }
 .text {
-    grid-column: 1 / 4;
+    grid-column: 1 / 6;
     grid-row: 2;
-    font-family: 'Cormorant Garamond', sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 80px;
-    line-height: 97px;
-    
+    order: 2;
 }
 .main_1 {
     max-width: 623px;
@@ -282,71 +407,61 @@ body {
     grid-column: 3 / 5;
     grid-row: 2 / 5;
     width: 100%;
-
 }
 .text span {
     text-transform: uppercase;
 }
-.main_price {
+.flex-column {
     grid-column: 1 / 3;
-    grid-row: 3;
+    grid-row: 3 / 5;
+    margin-top: 400px;
+}
+.main_price {
     justify-items: start;
     align-items: center; 
-    padding-top: 70px;
-
+    /* display: flex;
+    flex-direction: column; */
     display: grid;
-    grid-template-columns: 0.3fr 0.5fr;
+    grid-template-columns: 0.8fr 1fr;
     grid-template-rows: 0.5fr;
-    gap: 30px;
+    /* gap: 30px; */
 }
 .text_button {
     grid-column: 1;
     grid-row: 1;
-    align-items: center;
-    padding: 5px 20px;
-    text-decoration: none;
-    color: black;
-    border: solid black 1px;
-    background-color: #FFFAF3;
 }
-.text_button:hover {
-    background-color: #D4DCB2;
-}
+
 .price {
     grid-column: 2;
     grid-row: 1;
     color: black;
 }
 .main_border {
-    grid-column: 1 / 3;
-    grid-row: 4;
-    display: grid;
-    
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
     grid-template-columns: 0.15fr 0.15fr 0.15fr;
-    grid-template-rows: 1fr;
-    padding-top: 115px;
+    grid-template-rows: 1fr; */
+    margin-top: 115px;
     gap: 27px;
+    width: 200%;
 }
 .main_2 {
-    width: 160px;
-    border-radius: 100px 0 0 0;
-    height: 160px;
+    border-radius: 130px 0 0 0;
 }
-.main_3 {
-    width: 160px;
-    height: 160px;
-}
+.main_2,
+.main_3,
 .main_4 {
-    width: 160px;
-    height: 160px;
+    width: 15%;
+    height: 15%;
 }
 .statistics {
     margin: 0 auto;
     max-width: 830px;
-    padding-top: 150px;
-    padding-bottom: 100px;
+    width: 100%;
+    margin-top: 150px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     text-align: center;
@@ -375,7 +490,7 @@ body {
     grid-column: 3;
     grid-row: 2;
 }
-.years,
+/* .years,
 .numbers,
 .experience {
     font-family: 'Cormorant Garamond', sans-serif;
@@ -383,28 +498,99 @@ body {
     font-weight: 400;
     font-size: 72px;
     line-height: 87px;
-}
+} */
 
 
-@media only all and (max-width: 770px) {
+@media only all and (max-width: 900px) {
+    .container_1 {
+        margin: 0 30px;
+    }
+    .main_1 {
+        width: 90%;
+    }
+    .main_2 {
+        border-radius: 70px 0 0 0;
+    }
+    .statistics {
+        max-width: 737px;
+    }
+    .main_border,
+    .main_price {
+        gap: 8px;
+    }
+    .flex-column {
+        margin-top: 330px;
+    }
     
 }
-
+@media only all and (max-width: 450px) {
+    .block {
+        height: 430px;
+    }
+    .statistics_flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+    .statistics {
+        width: 320px;
+    }
+    .years_text,
+    .numbers_text,
+    .experience_text {
+        width: 150px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .years,
+    .numbers,
+    .experience {
+        font-weight: bold;
+        
+    }
+    .text1 {
+        padding-top: 15px;
+    }
+    .main_1 {
+        margin-bottom: 120px;
+    }
+    .main_border {
+        margin-top: 100px;
+    }
+    .main_2 {
+        border-radius: 42px 0 0 0;
+    }
+    .flex-column {
+        margin-top: 240px;
+        gap: 50px;
+    }
+    .main_price {
+        display: flex;
+        flex-direction: column;
+        width: 220%;
+    }
+    .statistics {
+        margin-top: 0;
+    }
+}
 
 /* Акции */
 .together {
-    margin: 0 auto;
-    width: 100%;
     height: 674px;
-    max-width: 1200px;
 }
-.d-block {
-    max-width: 1170px;
+.carousel-item img {
+    margin-top: 100px;
+    margin-bottom: 160px;
+    max-width: 1169px;
     max-height: 411px;
 }
+
 .carousel-caption {
     position: absolute;
-    bottom: 3rem;
+    bottom: 12rem;
     left: 55%;
     border: solid transparent;
     backdrop-filter: blur(30px);
@@ -412,6 +598,7 @@ body {
     text-align: start;
     padding: 20px;
     z-index: 1;
+    
 }
 .carousel-caption h3,
 .carousel-caption p {
@@ -421,7 +608,7 @@ body {
     color: black;
 }
 .carousel-indicators {
-    bottom: -75px;
+    bottom: 70px;
 }
 .carousel-indicators li {
     width: 13px;
@@ -436,6 +623,11 @@ body {
     width: 15px;
     height: 15px;
 }
+.d-none {
+    width: 80%;
+    max-width: 413px;
+    max-height: 250px;
+}
 /* .action {
     max-width: 500px;
     height: 287px;
@@ -444,13 +636,40 @@ body {
     right: 25%;
 } */
 
-@media only all and (max-width: 770px) {
+@media only all and (max-width: 900px) {
     .together {
-        height: 350px;
+        height: 549px;
     }
-    .d-block {
-        max-width: 769px;
+    .carousel-caption {
+        font-size: 16px;
+        
     }
+    .d-none {
+        display: block !important;
+        width: 70%;
+    }
+}
+@media only all and (max-width: 450px) {
+    .carousel-caption {
+        font-size: 13px;
+        bottom: -1rem;
+        left: 0;
+        backdrop-filter: none;
+        text-align: center;
+        width: 100%;
+    }
+    .carousel-caption h3,
+    .carousel-caption p {
+        padding-bottom: 10px;
+    }
+    .carousel-indicators {
+        bottom: -75px;
+    }
+    .carousel-caption-2 {
+        bottom: 2rem;
+        width: 70%;
+    }
+    
 }
 
 
@@ -458,34 +677,21 @@ body {
 .our_service {
     width: 100%;
     max-width: 1200px;
-    height: 800px;
+    height: 805px;
     margin: 0 auto;
-}
-section.our_service h2 {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: calc(24px + (72 - 24) * ((100vw - 100px) / (1440 - 320)));
-    line-height: calc(29px + (87 - 29) * ((100vw - 100px) / (1440 - 320)));
-    text-align: center;
-    
-}
-.our_service_button:hover {
-    background-color: #D4DCB2;
-    opacity: 0.7;
 }
 .service {
     position: absolute;
     max-width: 1200px;
-    padding-top: 10px;
-    width: 100%;
+    margin: 0 auto;
+    padding-top: 1.6rem;
 }
 .service_name {
     font-family: 'Cormorant Garamond', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: calc(16px + (36 - 16) * ((100vw - 100px) / (1440 - 320)));
-    line-height: calc(19px + (44 - 19) * ((100vw - 100px) / (1440 - 320)));
+    font-size: 36px;
+    line-height: 44px;
 }
 .radio_service {
     display: none;
@@ -510,29 +716,27 @@ section.our_service h2 {
 }
 .radio_service:checked + label + div {
     display: grid;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    grid-template-rows: 2.5fr 0.3fr;
     position: absolute;
     height: 450px;
     left: 0;
-    right: 734px;
+    /* right: 734px; */
     top: 70px;
-    min-width: 59em;
+    max-width: 59rem;
+    
 }
-/* .description_1 {
-    display: flex;
-    flex-wrap: wrap;
-} */
 .description,
 .build-up,
 .pedicure {
-    display: grid;
-    grid-template-columns: 5fr 1fr 6fr;
-    grid-template-rows: 2.5fr 0.3fr;
-    margin-top: 10px;
+    /* display: inline-block; */
+    margin-top: 20px;
+    max-width: 1170px;
 }
 .radio_text {
     grid-column: 1;
     grid-row: 1;
-    margin-right: 25px;
+    margin-right: 30px;
 }
 .radio_text p,
 .radio_price p,
@@ -544,27 +748,13 @@ section.our_service h2 {
     grid-column: 2;
     grid-row: 1;
 }
-/* .build-up {
-    position: absolute;
-    width: 571px;
-    height: 287px;
-}
-.pedicure {
-    position: absolute;
-    width: 571px;
-    height: 287px;
-} */
-/* .description_pedicure {
-    float: left;
-    margin-right: 35px;
-} */
 div.description img,
 div.build-up img {
     grid-column: 3;
     grid-row: 1;
-    width: 60%;
+    width: 70%;
     padding-top: 3rem;
-    padding-left: 5rem;
+    /* padding-left: 5rem; */
 }
 div.pedicure img {
     width: 90%;
@@ -597,10 +787,12 @@ div.pedicure img {
      
 }
 .service_img {
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    top: 10px;
-    width: 20%;
+    top: 0; */
+    width: 30%;
+    padding-top: 1.6rem;
+    
 }
 .clearfix:after {
     display: block;
@@ -610,21 +802,14 @@ div.pedicure img {
     visibility: hidden;
 }
 .our_service_button {
-    align-items: center;
-    padding: 5px 20px;
-    text-decoration: none;
-    color: black;
-    border: solid black 1px;
     grid-column: 1;
     grid-row: 2;
-    width: 140px;
-    height: 40px;
 }
 
 
-@media only all and (max-width: 770px) {
+@media only all and (max-width: 900px) {
     .our_service {
-        max-width: 770px;
+        /* max-width: 770px; */
         height: 694px;
         padding: 10px 30px;
     }
@@ -634,46 +819,106 @@ div.pedicure img {
     .service_img {
         right: 30px;
     }
+    .service_name {
+        font-size: 24px;
+        line-height: 29px;
+    }
     div.description img,
     div.build-up img {
         width: 43%;
         padding: 0;
-    }   
+    }  
+    
 }
 
-@media only all and (max-width: 320px) {
+@media only all and (max-width: 450px) {
     .our_service {
-        max-width:320px;
-        
+        width: 463px;
+    }
+    .service,
+    .description {
+        width: 320px;
+    }
+    .service_img,
+    .description img,
+    .build-up img,
+    .pedicure img {
+        display: none;
+    }
+    .our_service_button {
+        width: 8.2rem;
+        height: 2.5rem;
+    }
+    .description {
+        display: grid;
+        grid-template-columns: 0.5fr 0.2fr;
+        grid-template-rows: 2.5fr 0.3fr;
+    } 
+    .radio_service:checked + label + div {
+        min-width: 20rem;
+        align-items: baseline;
+    }
+    .service_name {
+        font-size: 16px;
+        line-height: 19px;
     }
 }
 /* Портфолио */
-section.portfolio h2 {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 72px;
-    line-height: 87px;
-    text-align: center;
-}
-.row {
-    margin: 0 auto;
-    max-width: 1200px;
+.portfolio {
     height: 760px;
+}
+.container-fluid h2 {
+    margin-bottom: 50px;
+}
+.my-5 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 .item {
     width: 260px;
     height: 360px;
 }
+.owl-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFFAF3;
+    border: solid black 1px;
+    border-radius: 50%;
+}
+.owl-theme .owl-dots .owl-dot {
+    zoom: 1.5;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #D4DCB2;
+    border: transparent;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background-color:#FFFAF3;
+    border: solid black 0.5px;
+}
+
+@media only all and (max-width: 900px) {
+    .portfolio {
+        height: 483px;
+    }
+}
+@media only all and (max-width: 450px) {
+    .portfolio {
+        height: 500px;
+    }
+    .item {
+        margin: 0 auto;
+    }
+}
 /* Подарочный сертификат */
 .certificate {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
     height: 750px;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.6fr;
+    padding-top: 100px;
 }
 .certificate img {
     grid-column: 1;
@@ -685,11 +930,6 @@ section.portfolio h2 {
     grid-row: 1;
 }
 .certificate_text h2 {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 72px;
-    line-height: 87px;
     margin-bottom: 50px;
 }
 .certificate_text_2 {
@@ -700,151 +940,225 @@ section.portfolio h2 {
     align-items: center;
 }
 .organize_button {
-    background: #FFFAF3;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    border: solid black 1px;
-    width: 140px;
-    height: 40px;
     grid-column: 1;
     grid-row: 2;
 }
-.organize_button:hover {
-    background-color: #D4DCB2;
-    opacity: 0.7;
-    color: black;
-}
+
 .detailed {
-    color: black;
-    padding-left: 20px;  
+    color: black;  
 }
 .detailed:hover {
     color: black;
 }
 
-@media only all and (max-width: 770px) {
+@media only all and (max-width: 900px) {
+    /* .certificate {
+        height: 483px;
+    } */
     .certificate img {
         padding-left: 30px;
+        width: 70%;
     }
     .certificate_text {
         padding-right: 10px;
     }
+    .certificate_text h2/
+    .certificate_text_2 {
+        margin-bottom: 25px;
+    }
 }
+@media only all and (max-width: 450px) {
+    .certificate {
+        height: 734px;
+        display: flex;
+        flex-direction: column;
+    }
+    .certificate_text h2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .certificate_text_2 {
+        text-align: center;
+    }
+    .certificate_text_3 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .certificate img {
+        margin: 0 auto;
+    }
+    .organize_button {
+        width: 195px;
+        height: 50px;
+    }
+}
+
+
 /* Отзывы */
 .reviews {
-    width: 100%;
-    max-width: 1200px;
+    height: 876px;
     display: grid;
-    grid-template-columns: 0.7fr 0.5fr;
-    grid-template-rows: 0.3fr 0.1fr 0.05fr 0.2fr;
-    margin: 0 auto;
-    height: 895px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.15fr 0.15fr 0.1fr 0.05fr;
 }
 .reviews h2 {
-    font-family: 'Cormorant Garamond', sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: calc(24px + (72 - 24) * ((100vw - 100px) / (1440 - 320)));
-    line-height: calc(29px + (87 - 29) * ((100vw - 100px) / (1440 - 320)));
-
+}
+.h2_title_1 {
+    grid-column: 1;
+    grid-row: 1;
+    padding-left: 1.6rem;
+}
+.h2_title_2 {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 6rem;
+}
+.reviews h2 span {
+    font-style: normal;
 }
 .img1 {
-    width: 100%;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    width: 80%;
 }
 .first_reviews {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
 }
 .stars {
-    
+  grid-column: 1;
+  grid-row: 3;  
+  margin: 10px 0 20px 50px;
 }
-
-@media only all and (max-width: 770px) {
+.reviews_text {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    /* width: 500px !important; */
+    padding: 0 130px;
+}
+/* .carousel-control-prev-icon {
+    background-image: url('svg/Vector 1.svg');
+}
+.carousel-control-next-icon {
+    background-image: url('svg/Vector 2.svg');
+} */
+@media only all and (max-width: 900px) {
     .reviews {
-        max-width: 770px;
-        margin: 0 auto;
-        
-    }
-    .reviews h2 {
+        height: 575px;
 
     }
+    
     .img1 {
-        
         max-width: 222px;
         max-height: 308px;
     }
+    .reviews_text {
+        width: 450px !important;
+        padding: 0 70px;
+    }
 }
+@media only all and (max-width: 450px) {
+    .reviews {
+        height: 363px;
+        padding-top: 25px;
+    }
+    .block_h2_title {
+        font-size: 22px;
+    }
+    .img1 {
+        width: 100%;
+    }
+}
+
+
 /* Наши студии, расположение */
 .location {
-    padding-top: 100px;
-    max-width: 1200px;
-    height: 850px;
-    display: grid;
-    grid-template-columns: 0.7fr 0.6fr;
-    grid-template-rows: 0.1fr 0.1fr 0.3fr 0.2fr;
-    margin: 0 auto;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
 }
-.location h2 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    text-align: center;
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 72px;
-    line-height: 87px;
-}
-.location h4 {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 44px;
-    text-align: center;
+.location_block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding-top: 50px;
 }
 .location_text {
-    width: 400px;
-    grid-column: 2;
-    grid-row: 3;
-    padding-top: 30px;
-    padding-bottom: 70px;
+    max-width: 400px;
+    padding-bottom: 30px;
 }
-.location_button {
-    grid-column: 2;
-    grid-row: 4;
-    text-decoration: none;
-    color: black;
-    border: solid black 1px;
-    background: #FFFAF3;
-    align-items: center;
-    width: 140px;
-    height: 40px;
+.location_inform {
+    margin-bottom: 95px;
 }
-.location_button:hover {
-    background-color: #D4DCB2;
-}
-/* Подвал */
-footer {
+.map {
     width: 100%;
-    margin: 0 auto;
-    max-width: 1200px;
-    max-height: 351px;
+}
+
+@media only all and (max-width: 900px) {
+    .location {
+        height: 550px;
+    }
+}
+@media only all and (max-width: 450px) {
+    .location {
+        height: 850px;
+    }
+    .location h2 {
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+    .location_block {
+        flex-direction: column-reverse;
+        padding-top: 10px;
+        gap: 0;
+    }
+    .location_inform {
+        display: block;
+        text-align: center;
+    }
+    .location_text {
+        padding-bottom: 20px;
+    }
+}
+
+/* Подвал */
+.footer-wrapper {
+    height: 351px;
     display: grid;
-    grid-template-columns: 0.3fr 0.4fr 0.3fr 0.3fr;
+    grid-template-columns: 0.7fr 1fr 1fr;
     grid-template-rows: 0.35fr;
     gap: 20px;
+    justify-items: center;
+    /* justify-content: center; */
+    padding-top: 75px;
 }
 .footer_logo {
     grid-column: 1;
     grid-row: 1;
 }
+.footer_logo_link svg {
+    width: 90%;
+}
 .footer_logo_link,
 .footer_menu_link {
     text-decoration: none;
     color: black;
+}
+.wrapper_footer_menu {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
+    grid-row: 1;
+    gap: 20px;
 }
 .footer_menu_list {
     grid-column: 2;
@@ -852,95 +1166,218 @@ footer {
     list-style-type: none;   
 }
 .footer_menu_list_2 {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
     list-style-type: none;  
 }
 ul li {
     padding-bottom: 20px;
 }
-footer h4 {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 44px;
-}
 .input_email {
     background-color:#FFFAF3;
-    padding: 10px;
-    width: 250px;
+    max-width: 340px;
+    height: 40px;
+}
+.input_email:focus,
+.input_email:active {
+    outline: none;
+}
+.input_email:invalid {
+    border: solid #ffdddd 1px;
+    background-color: #FFFAF3;
+}
+
+.input_email:valid {
+    border: solid black 1px;
+    background-color: #FFFAF3;
 }
 .email {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
+    padding-left: 20px;
+}
+.email h3 {
+    text-align: left;
+    line-height: 100%;
+    padding-bottom: 15px;
 }
 .email label {
     font-size: 14px;
-}
-.email label a {
-    color: black;
+    line-height: 100%;
+    padding-top: 15px;
 }
 .footer_svg {
     grid-column: 1;
     grid-row: 1;
 }
+.designe {
+    grid-column: 1;
+    grid-row: 1;
+    /* align-self: flex-end; */
+    padding-bottom: 2.7rem;
+}
 .icon {
     list-style-type: none;
-    padding-top: 80px;
+    padding-top: 60px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
 }
-.icon li {
+.footer_menu_link_double,
+.footer_menu_link_2_double {
+    display: none;
+}
+.designe,
+.footer_menu_link_1,
+.footer_menu_link_2,
+.footer_menu_link_3 {
+    text-decoration: none;  
+}
+.footer_foot {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: flex-end;
+}
+a.footer_menu_link_1 {
+    text-transform: uppercase;
+}
+.checkbox {
+    display: flex;
+    gap: 10px;
+}
+/* галочка чекбокса */
+.checkbox input.yes { /* скрываем дефолтный чекбокс */
+    display: none; 
+}
+.checkbox span { /* стилизируем новый чекбокс */
+    height: 14px;
+    width: 14px;
+    border: solid black 2px;
     display: inline-block;
-    justify-items: center;
-    
+    position: relative;
+    background-color:#FFFAF3;
+    padding: 7px;
+    margin-top: 10px;
+}
+  [type=checkbox]:checked + span:before { /* ставим иконку, когда чекбокс включен  */
+    content: '\1F5F8';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size:20px;
+    color:black;
 }
 
-
-@media only all and (max-width: 770px) {
-    body {
-        max-width: 770px;
+@media only all and (max-width: 900px) {
+    .footer-wrapper {
+        height: 305px;
+    }
+    footer {
+        gap: 0;
+        padding: 0 auto;
+    }
+    .footer-wrapper {
+        gap: 1;
+    }
+    .input_email {
         width: 100%;
     }
-    /* XNAILS - студии маникюра в Минске */
-    .container_1 {
+    .footer_menu_link_1,
+    .footer_menu_link_2 {
+        display: none;
+    }
+    .footer_foot {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 50px;
+        margin-top: 150px;
+
+    }
+    .footer_menu_link_double {
         
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .footer_menu_link_2_double {
+        display: block;
+        text-decoration: none;
+    }
+    .designe {
+        padding-bottom: 1.4rem;
+    }
+    .email label {
+        font-size: 10px;
+    }
+    .footer_menu_list,
+    .footer_menu_list_2 {
+        font-size: 16px;
+    }
+    .footer_logo_link img {
+        max-width: 90%;
+    }
+    .icon {
+        gap: 0;
+    }
+    .icon svg {
+        width: 70%;
+    }
+    .email h3 {
+        font-size: 24px;
+        padding-bottom: 15px;
+    }
+    .wrapper_footer_menu {
+        justify-content: center;
+        grid-column: 2;
+    }
+    
+}
+@media only all and (max-width: 450px) {
+    .footer-wrapper {
+        height: 415px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    .icon {
+        padding-top: 20px;
+         
+    }
+    .wrapper_footer_menu {
+        gap: 50px;
+        height: 120px;
+    }
+    .footer_menu_link_2_double,
+    .footer_menu_link_3 {
+        display: none;
+    }
+    .footer_menu_link_double {
+        display: flex;
+
+    }
+    .footer_foot_2 {
+        display: flex;
+        flex-direction: row; 
+        gap: 30px;
+    }
+    .input_email {
         width: 100%;
     }
-    .text {
-        font-size: 64px;
-        line-height: 78px;
+    .checkbox {
+        padding-top: 15px;
+        align-items: flex-end;
     }
-
-    .main_1 {
-        width: 80%;
-        max-width: 343px;
-        max-height: 351px;
-    }
-    .main_2,
-    .main_3,
-    .main_4 {
-        width: 103px;
-        height: 103px;
-    }
-    /* Вместе дешевле */
-    .together {
-        width: 100%;
-    }
-    .img_together {
-        max-width: 770px;
-    }
-    .border {
-        width: 413px;
-        height: 249px;
-    }
-    /* Наши услуги */
-    
-
-    
-
-}
-@media only all and (max-width: 320px) {
-    .main_price {
-        
+    /* .email h3 {
+        padding-bottom: 15px;
+    } */
+    .footer_foot {
+        margin-top: 0;
+        align-self:center;
     }
 }
+
+  
