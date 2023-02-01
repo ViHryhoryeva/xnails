@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFAF3;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+}
+.block_404 {
+    text-align: center; 
+}
+h1 {
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 210px;
+}
+.block_404 a {
+    text-decoration: none;
+    color: black;
+    border-bottom: solid #D4DCB2 2px;
+    padding-bottom: 5px;
+}

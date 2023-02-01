@@ -1,44 +1,85 @@
-
 .sertificate_description {
-    max-width: 1200px;
-    height: 1000px;
-    margin: 0 auto;
-    padding-top: 180px;
+    margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
-.points {
-    grid-column: 1;
-    grid-row: 1;
+.detailed_description_1 ~ div,
+.detailed_description_1 div:not(.conditions),
+.detailed_description_2 ~ div,
+.detailed_description_2 div:not(.conditions) {
+    margin-bottom: 20px;
+}
+.conditions {
+    font-weight: bold;
+}
+.wrapper_conditions {
+    padding-bottom: 70px;
+}
+.h4_menu_title {
+    display: flex;
+    flex-direction: column;
+    width: 377px;
     font-family: 'Cormorant Garamond', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 44px;
 }
-.points h4 {
-    margin-bottom: 20px;
-    color: black;
+.h4_menu_title li {
+    list-style-type: none;
+    padding: 5px 10px;
 }
-a {
-    color: black;
-    text-decoration: none;
+.h4_menu_title li.active {
+    border-bottom: solid #D4DCB2 2px;
 }
-div.h4_1:checked + div {
-    border-bottom: solid gray 1px;
+.content_description {
+    width: 100%;
 }
-.detailed_description {
-    grid-column: 2;
-    grid-row: 1;
+.content_description > div {
+    padding: 10px;
+    display: block;
 }
-.detailed_description p {
-    margin-bottom: 20px;
+.content_description > div:not(.active) {
+    display: none;
 }
-.conditions {
-    font-weight: bold;
+.list_title {
+    display: none;
 }
-.conditions_2 {
-    white-space: pre-wrap;
+
+.list_title:focus-visible {
+    outline:none;
+    border-radius: 0;
+}
+
+@media only all and (max-width: 900px) {
+    .h4_menu_title {
+        font-size: 24px;
+        line-height: 29px;
+        width: 258px;
+    }
+}
+@media only all and (max-width: 450px) {
+    .sertificate_description {
+        display: flex;
+        flex-direction: column;
+    }
+    .input_btn {
+        display: flex;
+        justify-content: center;
+    }
     
+    .list_title {
+        display: block;
+        background-color: #FFFAF3;
+        border: none;
+        width: 172px;
+        font-size: 18px;
+        line-height: 22px;
+        padding-left: 5px;
+    }
+    .h4_menu_title {
+        display: none;
+        
+    }
 }

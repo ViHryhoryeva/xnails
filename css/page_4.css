@@ -1,0 +1,80 @@
+html {
+    min-width: 320px;
+}
+.reviews_form {
+    border: solid black 1px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;  
+}
+.reviews_form label {
+    font-weight: 600;
+}
+.block_A {
+    margin-top: 50px;
+}
+.block_1,
+.block_2,
+.block_3 {
+    display: table;
+    
+}
+.block_1 label,
+.block_2 label,
+.block_3 label {
+    width: 200px;
+    display: table-cell;
+    font-style: italic;
+}
+.calendar,
+.text_inp_review,
+.review_inp_mail,
+textarea {
+    background-color: #FFFAF3;
+    border: solid black 1px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.block_4 {
+    text-align: end;
+}
+textarea {
+    height: 100px;
+    resize: none;
+}
+.calendar {
+    width: 146%;
+}
+.input_ok {
+    background-color: #FFFAF3;
+    border: solid black 1px;
+}
+.input_ok:focus {
+    box-shadow: 0 0 0 0.25rem #D4DCB2;
+}
+.input_ok:hover {
+    background-color: #D4DCB2;
+}
+@media only all and (max-width: 900px) {
+    .calendar {
+        width: 126%;
+        box-sizing: border-box;
+    }
+    .reviews_form {
+        width: 400px;
+    }
+}
+@media only all and (max-width: 500px) {
+    .reviews_form {
+        width: 300px;
+    }
+    .block_1 label,
+    .block_2 label,
+    .block_3 label {
+        width: 110px;
+    }
+    .calendar {
+        width: 142%;
+    }
+}
