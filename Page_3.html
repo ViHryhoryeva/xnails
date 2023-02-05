@@ -109,10 +109,10 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="menu_item"><a class="menu_link" href="page404.html" title="navigation">О нас</a></li>
+                            <li class="menu_item"><a class="menu_link" href="page404.html" title="navigation">Портфолио</a></li>
                             <li class="menu_item"><a class="menu_link" href="Page_3.html" title="navigation">Прайс</a></li>
-                            <li class="menu_item"><a class="menu_link" href="" title="navigation">Отзывы</a></li>
-                            <li class="menu_item"><a class="menu_link" href="" title="navigation">Расположение</a></li>
+                            <li class="menu_item"><a class="menu_link" href="Page_4.html" title="navigation">Отзывы</a></li>
+                            <li class="menu_item"><a class="menu_link" href="Project.html/#location" title="navigation">Расположение</a></li>
                             <li class="menu_item"><a class="menu_link" href="page404.html" title="navigation">Блог</a></li>
                             <li class="menu_item"><input class="menu_link_button_inside btn" data-toggle="modal" data-target="#exampleModal" type="button" value="Записаться"></li>
                         </ul>
@@ -182,7 +182,7 @@
                         <!-- <input class="btn_service buttons btn" data-toggle="modal" data-target="#exampleModal" type="button" value="Записаться"> -->
                     </div>
                     <div id="third">
-                        <img src="images/foto ellipse 1.png" alt="nails pedicure XNAILS">
+                        <img src="images/foot2.png" alt="nails pedicure XNAILS">
                         <div class="description">
                             
                         <div class="description_pedicure">
@@ -298,9 +298,9 @@
                 </div>
                 <div class="wrapper_footer_menu">
                 <ul class="footer_menu_list">
-                    <li class="footer_menu_item"><a class="footer_menu_link" href="Project.html" title="navigation">О нас</a></li>
+                    <li class="footer_menu_item"><a class="footer_menu_link" href="page404.html" title="navigation">О нас</a></li>
                     <li class="footer_menu_item"><a class="footer_menu_link" href="" title="navigation">Портфолио</a></li>
-                    <li class="footer_menu_item"><a class="footer_menu_link" href="" title="navigation">Отзывы</a></li>
+                    <li class="footer_menu_item"><a class="footer_menu_link" href="Page_4.html" title="navigation">Отзывы</a></li>
                     <li class="footer_menu_item"><a class="footer_menu_link_2" href="page404.html" title="navigation">Политика конфиденциальности</a></li>
                     <li class="footer_menu_item"><p class="footer_menu_link_1">&copy Xnails 2023</p></li>  
                 </ul>
@@ -346,20 +346,6 @@
     
     <!-- Скрипт для наших услуг -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.menu_service li, .content_service > div').removeClass('active');
-            $('.menu_service li:first-of-type, .content_service > div:first-of-type').addClass('active');
-
-            $('.menu_service li').on('click', function() {
-                $('.menu_service li, .content_service > div').removeClass('active');
-                $(this).addClass('active');
-
-                let id = $(this).attr('data-id');
-
-                $(`#${id}`).addClass('active');
-            });
-        });
-    </script>
+    <script src="js/ForOurService.js"></script>
 </body>
 </html>

@@ -24,7 +24,6 @@ html {
 .block_3 label {
     width: 200px;
     display: table-cell;
-    font-style: italic;
 }
 .calendar,
 .text_inp_review,
@@ -56,6 +55,48 @@ textarea {
 .input_ok:hover {
     background-color: #D4DCB2;
 }
+.wrapper_reviews_part {
+    width: 100%;
+}
+.wrapper_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.wrapper_text {
+    margin: 20px 0;
+}
+/* Звездный рейтинг */
+.wrapper_rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 25px;
+}
+.star_rating_item {
+    font-size: 2rem;
+    color: #ff9800;
+    cursor: pointer;
+    transition: .5s;
+    opacity: .35;
+    padding-left: 5px;
+    border: none;
+    background-color: transparent;
+}
+.star_rating_item:hover,
+.star_rating_item:hover ~ .star_rating_item {
+    color: #ff9800;
+    opacity: 1;
+}
+.wrapper_rating[data-total-value="1"] .star_rating_item:nth-child(n + 5),
+.wrapper_rating[data-total-value="2"] .star_rating_item:nth-child(n + 4),
+.wrapper_rating[data-total-value="3"] .star_rating_item:nth-child(n + 3),
+.wrapper_rating[data-total-value="4"] .star_rating_item:nth-child(n + 2),
+.wrapper_rating[data-total-value="5"] .star_rating_item:nth-child(n + 1) {
+    color: orange;
+    opacity: 1;
+}
+
 @media only all and (max-width: 900px) {
     .calendar {
         width: 126%;
