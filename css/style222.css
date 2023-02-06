@@ -998,21 +998,31 @@ p.level {
 .reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 1fr;
+    align-items: start;
+    grid-template-rows: 0.2fr 0.2fr 1fr;
+    grid-auto-rows: minmax(100px, 1fr);
+}
+.review_A {
+    display: none;
 }
 .reviews h2 {
     font-style: italic;
     font-weight: 300;
+    line-height: 100%;
 }
-.block_h2_title {
-    grid-column: 1;
-    grid-row: 1 / 3;
-}
+/* .block_h2_title {
+    grid-column: 1 / 3;
+    grid-row: 1 ;
+} */
 .h2_title_1 {
     padding-left: 1.6rem;
+    grid-column: 1;
+    grid-row: 1;
 }
 .h2_title_2 {
     padding-left: 6rem;
+    grid-column: 1;
+    grid-row: 2;
 }
 .reviews h2 span {
     font-style: normal;
@@ -1022,11 +1032,13 @@ p.level {
     grid-row: 1 / 4;
     width: 80%;
     padding-left: 20px;
+    min-width: 100px;
+    min-height: 140px;
+    
 }
 .first_reviews {
     display: flex;
     flex-direction: row-reverse;
-    /* align-items: baseline; */
     margin-bottom: 10px;
     justify-content: space-between;
 }
@@ -1039,21 +1051,20 @@ p.level {
 }
 .block_rating {
     grid-column: 1;
-    grid-row: 3; 
+    grid-row: 2; 
     display: flex;
     flex-direction: row;
     margin-left: 87px;
 }
-
+.carousel-222 {
+    grid-column: 1;
+    grid-row: 3;
+}
 .date_reviews {
     margin-left: 20px;
 }
 .reviews_text {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    max-width: 500px;
     padding: 0 60px;
-    /* margin: 20px auto 0; */
 }
 
 /* Кнопка 'еще' */
@@ -1098,8 +1109,10 @@ p.level {
         width: 80%;
     }
     .reviews_text {
-        /* width: 450px !important; */
         padding: 0 70px;
+    }
+    .reviews h2 {
+        line-height: 70%;
     }
 }
 @media only all and (max-width: 500px) {
@@ -1123,13 +1136,19 @@ p.level {
         display: flex;
         flex-direction: column;
         padding-left: 20px;
+        align-items: flex-start;
     }
     .first_reviews div {
         display: flex;
         flex-direction: row;
     }
     .first_reviews a {
-        margin-bottom: 20px;
+        /* margin-bottom: 20px;
+        padding-left: 80px; */
+        display: none;
+    }
+    .review_A {
+        display: block;
     }
     .reviews {
         display: grid;
@@ -1139,11 +1158,9 @@ p.level {
     .carousel {
         grid-column: 1 / 3;
         grid-row: 2;
-        text-align: center;
     }
     .reviews_text {
         padding: 0 45px;
-        width: 330px !important;
     }
 }
 
