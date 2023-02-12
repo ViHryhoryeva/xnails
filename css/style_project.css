@@ -18,7 +18,7 @@ time, mark, audio, video {
 }
 html {
     box-sizing: border-box;
-    min-width: 300px;
+    min-width: 320px;
     margin: 0 auto;
     width: 100%;
 }
@@ -32,6 +32,7 @@ body {
     color: black;
     -webkit-text-size-adjust: none;
     font-size: 100%;
+    min-width: 320px;
 }
 * {
     -webkit-text-size-adjust: none;
@@ -51,6 +52,7 @@ a:hover {
 .wrapper_of_all {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     margin: 0 auto;
     padding: 0 100px;
 }
@@ -186,15 +188,20 @@ h3 {
 .input_submit {
     background-color: #d3d3d3;
     border: solid #6c757d 1px;
-    padding: 6px 10px;
+    padding: 7px 10px;
     position: absolute;
     bottom: -58px;
     right: 130px;
+    font-size: 18px;
 }
 .input_submit:hover {
     background-color: #212529;
     color: white;
     opacity: 0.5;
+}
+.close_close {
+    font-size: 38px;
+    line-height: 0.8;
 }
 @media only all and (max-width: 500px) {
     .button_input_text,
@@ -861,6 +868,9 @@ h3 {
     .wrapper_of_all {
         padding: 0;  
     }
+    .btn_service {
+        margin-left: 70px;
+    }
 }
 /* Портфолио */
 /* .portfolio {
@@ -1277,7 +1287,7 @@ ul li {
 }
 .input_email {
     background-color:#FFFAF3;
-    max-width: 340px;
+    min-width: 300px;
     height: 40px;
 }
 .input_email:focus,
@@ -1296,7 +1306,7 @@ ul li {
 .email {
     grid-column: 3;
     grid-row: 1;
-    padding-left: 20px;
+    padding: 0 10px;
 }
 .email h3 {
     text-align: left;
@@ -1307,6 +1317,9 @@ ul li {
     font-size: 14px;
     line-height: 100%;
     padding-top: 15px;
+}
+.policy_privacy {
+    text-decoration: underline;
 }
 .footer_svg {
     grid-column: 1;
@@ -1470,6 +1483,9 @@ ul li {
     .footer_foot {
         margin-top: 0;
         align-self:center;
+    }
+    .email h3 {
+        text-align: center;
     }
 }
 
