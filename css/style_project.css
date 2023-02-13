@@ -727,6 +727,9 @@ h3 {
     background: radial-gradient(circle closest-side at 15% 40%, #D4DCB2, #FFFAF3);
     /* height: 805px; */
 }
+.our_service h2 {
+    margin-bottom: 15px;
+}
 .menu_service {
     display: flex;
     width: 50%;
@@ -857,7 +860,7 @@ h3 {
         padding: 5px 5px;
     }
     .btn_service {
-        margin-left: 80px;
+        margin-left: 65px;
     }
 }
 /* Портфолио */
@@ -1451,9 +1454,11 @@ ul li {
         align-items: center;
         padding-top: 0;
     }
+    .footer_logo {
+        margin-top: 50px;
+    }
     .icon {
-        padding-top: 20px;
-         
+        padding-top: 20px; 
     }
     .wrapper_footer_menu {
         gap: 50px;
