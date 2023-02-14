@@ -269,12 +269,12 @@ h3 {
     .menu_link_button {
         margin: 0 auto;
     }
-/* Бургер меню */
-/* скрываем чекбокс */
+    /* Бургер меню */
+    /* скрываем чекбокс */
 #menu__toggle {
     opacity: 0;
     }
-  /* стилизуем кнопку */
+    /* стилизуем кнопку */
 .menu__btn {
     display: flex; 
     align-items: center; 
@@ -286,7 +286,7 @@ h3 {
     cursor: pointer;
     z-index: 101;
     }
-  /* добавляем "гамбургер" */
+     /* добавляем "гамбургер" */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -304,7 +304,7 @@ h3 {
     content: '';
     top: 8px;
     }
-  /* контейнер меню */
+    /* контейнер меню */
 .menu_nav {
     display: block;
     position: fixed;
@@ -320,7 +320,7 @@ h3 {
     background-color: #FFFAF3;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     }
-  /* элементы меню */
+    /* элементы меню */
 .menu_link {
     display: block;
     padding: 12px 24px;
@@ -352,7 +352,7 @@ h3 {
     visibility: visible;
     left: 0;
     }
-  /* анимация для бургера */
+    /* анимация для бургера */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -406,9 +406,6 @@ h3 {
     }
 }
 /* XNAILS - студии маникюра в Минске */
-.content_1 {
-    /* max-height: 1280px; */
-}
 .block {
     display: grid; 
     grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
@@ -420,14 +417,14 @@ h3 {
     grid-column: 1 / 5;
     grid-row: 1;
     padding-top: 80px;
-    order: 1;
+    /* order: 1; */
 }
 .text {
     grid-column: 1 / 6;
     grid-row: 2;
     font-style: italic;
     font-weight: 300;
-    order: 2;
+    /* order: 2; */
     
 }
 .main_1 {
@@ -725,7 +722,6 @@ h3 {
 /* Наши услуги */
 .our_service {
     background: radial-gradient(circle closest-side at 15% 40%, #D4DCB2, #FFFAF3);
-    /* height: 805px; */
 }
 .our_service h2 {
     margin-bottom: 15px;
@@ -760,7 +756,6 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 0.2fr;
     gap: 20px;
-    /* width: 50%; */
 }
 .description img {
     width: 20%;
@@ -775,14 +770,12 @@ h3 {
     font-size: 36px;
     line-height: 44px;
 }
-.radio_price > p {
-    /* width: 200px; */
+.radio_price > div {
     margin-bottom: 20px;
 }
-.radio_text > p,
-.description_build-up > p,
-.description_pedicure > p {
-    /* min-width: 300px; */
+.radio_text > div,
+.description_build-up > div,
+.description_pedicure > div {
     margin-bottom: 20px;
 }
 #first img,
@@ -804,6 +797,32 @@ h3 {
     content: "";
     height: 0;
     visibility: hidden;
+}
+/* Кнопка 'подробнее' */
+.radio_text .read-more {
+    display: none;
+}
+.radio_text .read-more + label + div {
+    display: none;
+}
+.radio_text .read-more:checked + label + div {
+    display: block;
+}
+.radio_text .read-more + label {
+    cursor: pointer;
+}
+.radio_text .read-more:checked + label {
+    display: none;
+}
+.radio_text .read-more + label + div + input + label {
+    display: none;
+    cursor: pointer;
+}
+.radio_text .read-more:checked + label + div + input + label {
+    display: block;
+}
+.radio_text .read-more:checked + label + div + input + label > div.radio_price div.level_1 {
+    padding-bottom: 100px;
 }
 /* .wrapper_btn {
     margin: 0 auto;
@@ -845,10 +864,10 @@ h3 {
     /* .menu_service {
         width: 67%;
     } */
-    p.level {
+    div.level {
         margin-bottom: 20px;
     }
-    .radio_price > p {
+    .radio_price > div {
         width: 60px;
     } 
 }
@@ -863,10 +882,12 @@ h3 {
         margin-left: 65px;
     }
 }
+@media only all and (max-width: 400px) {
+    div.level {
+        margin-bottom: 40px;
+    }
+}
 /* Портфолио */
-/* .portfolio {
-    height: 760px;
-} */
 .container-fluid h2 {
     margin-bottom: 50px;
 }
@@ -915,15 +936,7 @@ h3 {
 .owl-nav button.owl-next {
     right: -24px;
 }
-@media only all and (max-width: 1000px) {
-    /* .portfolio {
-        height: 483px;
-    } */
-}
 @media only all and (max-width: 500px) {
-    /* .portfolio {
-        height: 500px;
-    } */
     .item {
         margin: 0 auto;
     }
@@ -976,7 +989,7 @@ h3 {
     .certificate_text {
         padding-right: 10px;
     }
-    .certificate_text h2/
+    .certificate_text h2,
     .certificate_text_2 {
         margin-bottom: 25px;
     }
@@ -1083,7 +1096,7 @@ h3 {
 .reviews_text {
     padding: 0 70px;
 }
-/* Кнопка 'еще' */
+/* Кнопка 'подробнее' */
 .reviews_text .read-more-radio {
     display: none;
 }
@@ -1094,7 +1107,6 @@ h3 {
     display: block;
 }
 .reviews_text .read-more-radio + label {
-    text-decoration: underline;
     cursor: pointer;
 }
 .reviews_text .read-more-radio:checked + label {
@@ -1102,7 +1114,6 @@ h3 {
 }
 .reviews_text .read-more-radio + label + div + input + label {
     display: none;
-    text-decoration: underline;
     cursor: pointer;
 }
 .reviews_text .read-more-radio:checked + label + div + input + label {
@@ -1291,19 +1302,29 @@ ul li {
     border-left: none;
 }
 .input_email:focus,
-.input_email:active {
+.input_email:active,
+.btn_img:focus,
+.btn_img:active  {
     outline: none;
 }
 .input_email:invalid {
     border: solid #ffdddd 1px;
     background-color: #FFFAF3;
+    border-right: none;
+    color: red;
 }
-
 .input_email:valid {
     border: solid black 1px;
     background-color: #FFFAF3;
     border-right: none;
+    color: black;
 }
+.btn_img:invalid {
+    border: solid #ffdddd 1px;
+    background-color: #FFFAF3;
+    border-left: none;
+}
+.btn_img:valid
 .email {
     grid-column: 3;
     grid-row: 1;
@@ -1379,7 +1400,7 @@ ul li {
     position: absolute;
     top: 0;
     left: 0;
-    font-size:20px;
+    font-size: 20px;
     color:black;
 }
 @media only all and (max-width: 1000px) {
@@ -1391,7 +1412,7 @@ ul li {
         padding: 0 auto;
     }
     .footer-wrapper {
-        gap: 1;
+        gap: 1px;
     }
     .input_email {
         width: 100%;

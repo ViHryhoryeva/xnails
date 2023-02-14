@@ -15,16 +15,18 @@ html {
 }
 .block_1,
 .block_2,
-.block_3 {
+.block_3,
+.block_4 {
     display: table;
-    
+    width: 100%;
 }
 .block_1 label,
 .block_2 label,
-.block_3 label {
+.block_3 label,
+.block_4 label {
     width: 200px;
     display: table-cell;
-}
+}   
 .calendar,
 .text_inp_review,
 .review_inp_mail,
@@ -35,16 +37,17 @@ textarea {
     margin-bottom: 10px;
     box-sizing: border-box;
 }
-.block_4 {
+.block_5 {
     text-align: end;
 }
 textarea {
-    height: 100px;
     resize: none;
+    margin-bottom: 0;
+    height: 40px;
 }
-.calendar {
-    width: 146%;
-}
+/* .calendar {
+    width: 205%;
+} */
 .input_ok {
     background-color: #FFFAF3;
     border: solid black 1px;
@@ -62,7 +65,6 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
 }
 .wrapper_text {
     margin: 20px 0;
@@ -71,8 +73,8 @@ textarea {
 .wrapper_rating {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: flex-start;
 }
 .star_rating_item {
     font-size: 2rem;
@@ -100,7 +102,6 @@ textarea {
 
 @media only all and (max-width: 900px) {
     .calendar {
-        width: 126%;
         box-sizing: border-box;
     }
     .reviews_form {
@@ -116,7 +117,7 @@ textarea {
     .block_3 label {
         width: 110px;
     }
-    .calendar {
-        width: 142%;
+    .block_4 label {
+        width: 110px;
     }
 }
