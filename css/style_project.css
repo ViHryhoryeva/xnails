@@ -223,7 +223,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding-top: 40px;
+    padding: 5px 0;
     max-width: 1200px;
 }
 .logo_link,
@@ -279,7 +279,7 @@ h3 {
     display: flex; 
     align-items: center; 
     position: fixed;
-    top: 45px;
+    top: 10px;
     left: 20px;
     width: 26px;
     height: 26px;
@@ -632,6 +632,7 @@ h3 {
 }
 .carousel-indicators {
     bottom: 70px;
+    z-index: 1;
 }
 .carousel-indicators li {
     width: 13px;
