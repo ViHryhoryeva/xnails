@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300&display=swap');
+@keyframes MyAnimation1 {
+    from { background-color: #FFFAF3; }
+    to { background-color: #D4DCB2; }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,24 +60,6 @@ a:hover {
     margin: 0 auto;
     padding: 0 100px;
 }
-@media only all and (max-width: 1000px) {
-    body {
-        font-size: 16px;
-    }
-    .wrapper_of_all {
-        width: 100%;
-        padding: 0 20px; 
-    }
-}
-@media only all and (max-width: 500px) {
-    body {
-        font-size: 13px;
-    }
-    .wrapper_of_all {
-        width: 100%;
-        padding: 0 5px; 
-    }
-}
 .buttons,
 .button_1 { 
     border: solid black 1px;
@@ -88,6 +74,8 @@ a:hover {
 .button_1:hover,
 .menu_link_button_inside:hover {
     background-color: #D4DCB2;
+    font-weight: bold;
+    animation: MyAnimation1 2s steps(5) infinite;
 }
 h1 {
     font-family: 'Cormorant Garamond', sans-serif;
@@ -111,42 +99,6 @@ h3 {
     font-size: 36px;
     line-height: 44px;
     text-align: center;
-}
-@media only all and (max-width: 1000px) {
-    h1 {
-        font-size: 64px;
-        line-height: 78px;
-    }
-    h2 {
-        font-size: 55px;
-        line-height: 67px;
-    }
-    h3 {
-        font-size: 24px;
-        line-height: 29px;
-    }
-    .btn {
-        font-size: 16px;
-    }
-}
-@media only all and (max-width: 500px) {
-    h1 {
-        font-size: 28px;
-        line-height: 34px;
-    }
-    h2 {
-        font-size: 24px;
-        line-height: 29px;
-    }
-    h3 {
-        font-size: 16px;
-        line-height: 19px;
-    }
-    .buttons,
-    .button_1 {
-        width: 195px;
-        height: 50px;
-    }
 }
     /* Модальное окно */
 .btn {
@@ -203,12 +155,6 @@ h3 {
     font-size: 38px;
     line-height: 0.8;
 }
-@media only all and (max-width: 500px) {
-    .button_input_text,
-    .button_input_tel {
-        width: 100%;
-    }
-}
     /* Шапка */
 .head {
     background-color: #FFFAF3;
@@ -264,152 +210,10 @@ h3 {
 .logo_link_burger {
     display: none;
 }
-@media only all and (max-width: 1100px) {
-    .header_logo, 
-    .menu_link_button {
-        margin: 0 auto;
-    }
-    /* Бургер меню */
-    /* скрываем чекбокс */
-#menu__toggle {
-    opacity: 0;
-    }
-    /* стилизуем кнопку */
-.menu__btn {
-    display: flex; 
-    align-items: center; 
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 101;
-    }
-     /* добавляем "гамбургер" */
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #616161;
-    }
-.menu__btn > span::before {
-    content: '';
-    top: -8px;
-    }
-.menu__btn > span::after {
-    content: '';
-    top: 8px;
-    }
-    /* контейнер меню */
-.menu_nav {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 440px;
-    margin: 0;
-    padding: 27px 0;
-    list-style: none;
-    text-align: center;
-    background-color: #FFFAF3;
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    }
-    /* элементы меню */
-.menu_link {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    }
-.menu_link:hover {
-    font-weight: bold;
-    border-radius: 10px; 
-    box-shadow: 0 0 15px #D4DCB2;
-    }
-.logo_link_burger {
-    text-align: center;
-    }
-#menu__toggle:checked ~ .menu__btn > span {
-    transform: rotate(45deg);
-    }
-#menu__toggle:checked ~ .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0);
-    }
-#menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-    }
-#menu__toggle:checked ~ .menu_nav {
-    visibility: visible;
-    left: 0;
-    }
-    /* анимация для бургера */
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-    transition-duration: .25s;
-    }
-.menu_nav {
-    transition-duration: .25s;
-    }
-.menu_link {
-    transition-duration: .25s;
-    }
-}
 .menu_link_button_inside {
     display: none;
 }
-@media only all and (max-width: 1000px) {
-    .menu_link_button {
-        width: 140px;
-    }
-}
-@media only all and (max-width: 500px) {
-    .menu_link_button,
-    .button_1 {
-        display: none;
-    }
-    .menu_link_button_inside {
-        display: block;
-        border: solid black 1px;
-        align-items: center;
-        padding: 5px 20px;
-        width: 170px;
-        height: 47px;
-        background-color: #FFFAF3;
-        text-transform: uppercase;
-    }
-    .menu_item .menu_link_button_inside {
-        margin-left: 66px;
-    }
-    .input_submit {
-        font-size: 18px;
-        padding: 10px 14px;
-    }
-    .logo_link {
-        text-align: right;
-    }
-    .logo_link_burger {
-        display: block;
-    }
-    .menu__btn {
-        left: 10px;
-    }
-    .menu_nav {
-        height: 560px;
-        padding: 10px 0;
-    }
-}
-/* XNAILS - студии маникюра в Минске */
+/* XNAILS - студия маникюра */
 .block {
     display: grid; 
     grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
@@ -429,7 +233,6 @@ h3 {
     font-style: italic;
     font-weight: 300;
     /* order: 2; */
-    
 }
 .main_1 {
     max-width: 623px;
@@ -520,86 +323,6 @@ h3 {
     grid-column: 3;
     grid-row: 2;
 }
-@media only all and (max-width: 1000px) {
-    .container_1 {
-        margin: 0 30px;
-    }
-    .main_1 {
-        width: 90%;
-    }
-    .main_2 {
-        border-radius: 70px 0 0 0;
-    }
-    .statistics {
-        max-width: 737px;
-    }
-    .main_border,
-    .main_price {
-        gap: 8px;
-    }
-    .flex-column {
-        margin-top: 330px;
-    }   
-}
-@media only all and (max-width: 500px) {
-    .block {
-        height: 430px;
-    }
-    .statistics_flex {
-        display: flex;
-        flex-direction: column;
-    }
-    .flex-column {
-        display: flex;
-        flex-direction: column-reverse !important;
-    }
-    .statistics {
-        width: 320px;
-    }
-    .years_text,
-    .numbers_text,
-    .experience_text {
-        width: 150px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    .years,
-    .numbers,
-    .experience {
-        font-weight: bold;
-    }
-    .text1 {
-        padding-top: 15px;
-    }
-    .main_1 {
-        margin-bottom: 120px;
-    }
-    .main_border {
-        margin-top: 100px;
-    }
-    .main_2 {
-        border-radius: 42px 0 0 0;
-    }
-    .flex-column {
-        margin-top: 240px;
-        gap: 50px;
-    }
-    .main_price {
-        display: flex;
-        flex-direction: column;
-        width: 200%;
-    }
-    .statistics {
-        margin-top: 0;
-    }
-    .menu_nav li a:hover,
-    .menu_nav li a:active,
-    .menu_nav li a:focus {
-        font-weight: bold;
-        border-radius: 10px; 
-        box-shadow: 0 0 15px #D4DCB2 inset;
-    }
-}
 /* Акции */
 .carousel-item img {
     margin-top: 100px;
@@ -631,6 +354,14 @@ h3 {
 .carousel-caption a {
     color: black;
 }
+.carousel-caption a:focus,
+.carousel-caption a:hover,
+.carousel-caption a:active {
+    font-weight: bold;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px #D4DCB2;
+    padding: 5px;
+}
 .carousel-indicators {
     bottom: 70px;
     z-index: 1;
@@ -659,55 +390,6 @@ h3 {
 .carousel-inner {
     height: 100%;
 }
-@media only all and (max-width: 1000px) {
-    .carousel-caption {
-        font-size: 14px;
-        line-height: 17px;
-        padding: 5px;
-        left: 40%;
-        bottom: 12rem;
-    }
-    .carousel-caption h3,
-    .carousel-caption p {
-        padding-bottom: 5px;
-    }
-    .d-none {
-        display: block !important;
-        width: 300px;
-        height: 180px;
-    }
-    .carousel-caption-2 {
-        bottom: 14rem;
-        height: 17%;
-    }
-}
-@media only all and (max-width: 500px) {
-    .together {
-        height: 550px;
-    }
-    .carousel-caption {
-        font-size: 13px;
-        bottom: -3rem;
-        left: 0;
-        backdrop-filter: none;
-        text-align: center;
-        width: 100%;
-    }
-    .carousel-caption h3 {
-        padding-bottom: 10px;
-    }
-    .carousel-caption p {
-        padding-bottom: 10px;
-    }
-    .carousel-indicators {
-        bottom: -28px;
-    }
-    .carousel-caption-2 {
-        bottom: -6rem;
-        width: 100%;
-        height: 50%;
-    }
-}
 /* Наши услуги */
 .our_service {
     background: radial-gradient(circle closest-side at 15% 40%, #D4DCB2, #FFFAF3);
@@ -726,10 +408,13 @@ h3 {
 }
 .menu_service li.active {
     font-weight: 500;
-    border-bottom: solid #D4DCB2 2px;
+    border-bottom: solid #D4DCB2 2px;  
 }
 .menu_service li:hover {
     cursor: pointer;
+}
+.menu_service li.active:hover {
+    animation: MyAnimation1 2s steps(5) infinite;
 }
 .content_service {
     width: 100%;
@@ -762,7 +447,9 @@ h3 {
     font-size: 36px;
     line-height: 44px;
 }
-.radio_text {
+.radio_text,
+.description_build-up,
+.description_pedicure {
     width: 50%;
 }
 .radio_text_1 {
@@ -775,15 +462,8 @@ h3 {
     justify-content: space-between;
     padding-left: 20px;
     padding-bottom: 10px;
+    gap: 15px;
 }
-/* .radio_price > div {
-    margin-bottom: 20px;
-}
-.radio_text > div,
-.description_build-up > div,
-.description_pedicure > div {
-    margin-bottom: 20px;
-} */
 #first img,
 #second img {
     float: right;
@@ -829,46 +509,6 @@ h3 {
 }
 .radio_text .read-more:checked + label + div + input + label > div.radio_price div.level_1 {
     padding-bottom: 100px;
-}
-@media only all and (max-width: 1000px) {
-    .service_name {
-        font-size: 24px;
-        line-height: 29px;
-    }
-}
-@media only all and (max-width: 700px) {
-    .service_img,
-    #first img,
-    #second img,
-    #third img {
-        display: none;
-    }
-    .radio_text {
-        width: 100%;
-    }
-}
-@media only all and (max-width: 600px) {
-    .service_name {
-        font-size: 20px;
-        line-height: 21px;
-    }
-    .more_details {
-        padding-left: 0;
-    }
-    .radio_text {
-        width: 100%;
-    }
-    .service_block_btn {
-        margin: 0 auto;
-    }
-    .btn_service {
-        margin-left: 60px;
-    }
-}
-@media only all and (max-width: 400px) {
-    .menu_service li {
-        padding: 5px 5px;
-    } 
 }
 /* Портфолио */
 .container-fluid h2 {
@@ -919,14 +559,8 @@ h3 {
 .owl-nav button.owl-next {
     right: -24px;
 }
-@media only all and (max-width: 500px) {
-    .item {
-        margin: 0 auto;
-    }
-}
 /* Подарочный сертификат */
 .certificate {
-    /* height: 750px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.6fr;
@@ -960,61 +594,16 @@ h3 {
 .detailed {
     padding: 5px;
 }
-
-@media only all and (max-width: 1000px) {
-    /* .certificate {
-        height: 483px;
-    } */
-    .certificate img {
-        padding-left: 30px;
-        width: 70%;
-    }
-    .certificate_text {
-        padding-right: 10px;
-    }
-    .certificate_text h2,
-    .certificate_text_2 {
-        margin-bottom: 25px;
-    }
-}
-@media only all and (max-width: 500px) {
-    .certificate {
-        /* height: 760px; */
-        display: flex;
-        flex-direction: column;
-    }
-    .certificate_text h2 {
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-    .certificate_text_2 {
-        text-align: center;
-    }
-    .certificate_text_3 {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    .certificate img {
-        margin: 0 auto;
-    }
-    .organize_button {
-        width: 195px;
-        height: 50px;
-    }
-}
 /* Отзывы */
 .block_reviews {
-    /* height: 976px; */
     margin: 100px 0;
 }
 .reviews {
     display: grid;
     grid-template-columns: 3fr 2fr;
     align-items: start;
-    grid-template-rows: auto 100px 1fr;
-    grid-auto-rows: minmax(100px, 1fr);
+    grid-template-rows: auto 1fr;
+    /* grid-auto-rows: minmax(100px, 1fr); */
 }
 .review_A {
     display: none;
@@ -1024,10 +613,6 @@ h3 {
     font-weight: 300;
     line-height: 100%;
 }
-/* .block_h2_title {
-    grid-column: 1 / 3;
-    grid-row: 1 ;
-} */
 .h2_title_1 {
     padding-left: 1.6rem;
     grid-column: 1;
@@ -1052,7 +637,7 @@ h3 {
 .first_reviews {
     display: flex;
     flex-direction: row-reverse;
-    margin-bottom: 10px;
+    margin: 10px 0;
     justify-content: space-between;
 }
 .first_reviews div {
@@ -1062,16 +647,25 @@ h3 {
 .first_reviews div p {
     margin-left: 50px;
 }
+.first_reviews a:focus,
+.first_reviews a:hover,
+.first_reviews a:active {
+    font-weight: bold;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px #D4DCB2;
+}
 .block_rating {
     grid-column: 1;
     grid-row: 2; 
     display: flex;
     flex-direction: row;
     margin-left: 87px;
+    margin-bottom: 10px;
 }
 .carousel-222 {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
+    margin-top: 20px;
 }
 .date_reviews {
     margin-left: 20px;
@@ -1102,83 +696,8 @@ h3 {
 .reviews_text .read-more-radio:checked + label + div + input + label {
     display: block;
 }
-@media only all and (max-width: 1000px) {
-    /* .block_reviews {
-        height: 675px;
-    } */
-    .block_h2_title {
-        font-size: 55px;
-        line-height: 67px;
-    }
-    .img1 {
-        max-width: 222px;
-        max-height: 308px;
-        width: 80%;
-    }
-    .reviews_text {
-        padding: 0 70px;
-    }
-    .reviews h2 {
-        line-height: 80%;
-    }
-    /* .carousel-222 {
-        grid-column: 1 / 3;
-        grid-row: 3;
-    } */
-}
-@media only all and (max-width: 500px) {
-    .block_reviews {
-        /* height: 600px; */
-        padding-top: 25px;
-    }
-    .block_h2_title {
-        font-size: 20px;
-    }
-    .img1 {
-        width: 98px;
-        height: 139px;
-        grid-column: 2;
-        grid-row: 1;
-    }
-    .img2 {
-        width: 15%;
-    }
-    .first_reviews {
-        display: flex;
-        flex-direction: column;
-        padding-left: 20px;
-        align-items: flex-start;
-    }
-    .first_reviews div {
-        display: flex;
-        flex-direction: row;
-    }
-    .first_reviews a {
-        /* margin-bottom: 20px;
-        padding-left: 80px; */
-        display: none;
-    }
-    .review_A {
-        display: block;
-        font-size: 13px;
-        text-align:end;
-    }
-    .reviews {
-        display: grid;
-        grid-template-columns: 1.3fr 1fr;
-        grid-template-rows: 0.5fr 1fr;
-    }
-    .carousel-222 {
-        grid-column: 1 / 3;
-        grid-row: 2;
-    }
-    .reviews_text {
-        padding: 0 50px;
-    }
-}
-/* Наши студии, расположение */
+/* Расположение студии XNAILS */
 .location {
-    /* height: 750px; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1201,41 +720,13 @@ h3 {
 .map {
     width: 100%;
 }
-@media only all and (max-width: 1000px) {
-    .location {
-        height: 550px;
-    }
-}
-@media only all and (max-width: 500px) {
-    .location {
-        height: 850px;
-    }
-    .location h2 {
-        padding-top: 25px;
-        padding-bottom: 15px;
-    }
-    .location_block {
-        flex-direction: column-reverse;
-        padding-top: 10px;
-        gap: 0;
-    }
-    .location_inform {
-        display: block;
-        text-align: center;
-    }
-    .location_text {
-        padding-bottom: 20px;
-    }
-}
 /* Подвал */
 .footer-wrapper {
-    /* height: 351px; */
     display: grid;
     grid-template-columns: 0.7fr 1fr 1fr;
     grid-template-rows: 0.35fr;
     gap: 20px;
     justify-items: center;
-    /* justify-content: center; */
     padding-top: 75px;
 }
 .footer_logo {
@@ -1272,6 +763,7 @@ ul li {
 }
 .input_email {
     background-color:#FFFAF3;
+    width: 100%;
 }
 .button_mail_img {
     display: flex;
@@ -1394,9 +886,531 @@ ul li {
     color:black;
 }
 @media only all and (max-width: 1000px) {
-    /* .footer-wrapper {
-        height: 305px;
-    } */
+    body {
+        font-size: 16px;
+    }
+    .wrapper_of_all {
+        width: 100%;
+        padding: 0 20px; 
+    }
+}
+@media only all and (max-width: 500px) {
+    body {
+        font-size: 13px;
+    }
+    .wrapper_of_all {
+        width: 100%;
+        padding: 0 5px; 
+    }
+}
+@media only all and (max-width: 1000px) {
+    h1 {
+        font-size: 64px;
+        line-height: 78px;
+    }
+    h2 {
+        font-size: 55px;
+        line-height: 67px;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+}
+@media only all and (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .buttons,
+    .button_1 {
+        width: 195px;
+        height: 50px;
+    }
+}
+/* Модальное окно */
+@media only all and (max-width: 500px) {
+    .button_input_text,
+    .button_input_tel {
+        width: 100%;
+    }
+}
+/* Шапка */
+@media only all and (max-width: 1100px) {
+    .header_logo, 
+    .menu_link_button {
+        margin: 0 auto;
+    }
+    /* Бургер меню */
+    /* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+    }
+    /* стилизуем кнопку */
+.menu__btn {
+    display: flex; 
+    align-items: center; 
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 101;
+    }
+     /* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    }
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+    }
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+    }
+    /* контейнер меню */
+.menu_nav {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 440px;
+    margin: 0;
+    padding: 27px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #FFFAF3;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    /* элементы меню */
+.menu_link {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    }
+.menu_link:hover {
+    font-weight: bold;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px #D4DCB2;
+    }
+.logo_link_burger {
+    text-align: center;
+    }
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+    }
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    }
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    }
+#menu__toggle:checked ~ .menu_nav {
+    visibility: visible;
+    left: 0;
+    }
+    /* анимация для бургера */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .25s;
+    }
+.menu_nav {
+    transition-duration: .25s;
+    }
+.menu_link {
+    transition-duration: .25s;
+    }
+}
+@media only all and (max-width: 1000px) {
+    .menu_link_button {
+        width: 140px;
+    }
+}
+@media only all and (max-width: 500px) {
+    .menu_link_button,
+    .button_1 {
+        display: none;
+    }
+    .menu_link_button_inside {
+        display: block;
+        border: solid black 1px;
+        align-items: center;
+        padding: 5px 20px;
+        width: 170px;
+        height: 47px;
+        background-color: #FFFAF3;
+        text-transform: uppercase;
+    }
+    .menu_item .menu_link_button_inside {
+        margin-left: 66px;
+    }
+    .input_submit {
+        font-size: 18px;
+        padding: 10px 14px;
+    }
+    .logo_link {
+        text-align: right;
+    }
+    .logo_link_burger {
+        display: block;
+    }
+    .menu__btn {
+        left: 10px;
+    }
+    .menu_nav {
+        height: 560px;
+        padding: 10px 0;
+    }
+}
+/* XNAILS студия маникюра в Минске  */
+@media only all and (max-width: 1000px) {
+    .container_1 {
+        margin: 0 30px;
+    }
+    .main_1 {
+        width: 90%;
+    }
+    .main_2 {
+        border-radius: 70px 0 0 0;
+    }
+    .statistics {
+        max-width: 737px;
+    }
+    .main_border,
+    .main_price {
+        gap: 8px;
+    }
+    .flex-column {
+        margin-top: 330px;
+    }   
+}
+@media only all and (max-width: 500px) {
+    .block {
+        height: 430px;
+    }
+    .statistics_flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+    .statistics {
+        width: 320px;
+    }
+    .years_text,
+    .numbers_text,
+    .experience_text {
+        width: 150px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .years,
+    .numbers,
+    .experience {
+        font-weight: bold;
+    }
+    .text1 {
+        padding-top: 15px;
+    }
+    .main_1 {
+        margin-bottom: 120px;
+    }
+    .main_border {
+        margin-top: 100px;
+    }
+    .main_2 {
+        border-radius: 42px 0 0 0;
+    }
+    .flex-column {
+        margin-top: 240px;
+        gap: 50px;
+    }
+    .main_price {
+        display: flex;
+        flex-direction: column;
+        width: 200%;
+    }
+    .statistics {
+        margin-top: 0;
+    }
+    .menu_nav li a:hover,
+    .menu_nav li a:active,
+    .menu_nav li a:focus {
+        font-weight: bold;
+        border-radius: 10px; 
+        box-shadow: 0 0 15px #D4DCB2 inset;
+    }
+}
+/* Акции */
+@media only all and (max-width: 1000px) {
+    .carousel-caption {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 5px;
+        left: 40%;
+        bottom: 12rem;
+    }
+    .carousel-caption h3,
+    .carousel-caption p {
+        padding-bottom: 5px;
+    }
+    .d-none {
+        display: block !important;
+        width: 300px;
+        height: 180px;
+    }
+    .carousel-caption-2 {
+        bottom: 14rem;
+        height: 17%;
+    }
+}
+@media only all and (max-width: 500px) {
+    .together {
+        height: 550px;
+    }
+    .carousel-caption {
+        font-size: 13px;
+        bottom: -3rem;
+        left: 0;
+        backdrop-filter: none;
+        text-align: center;
+        width: 100%;
+    }
+    .carousel-caption h3 {
+        padding-bottom: 10px;
+    }
+    .carousel-caption p {
+        padding-bottom: 10px;
+    }
+    .carousel-indicators {
+        bottom: -28px;
+    }
+    .carousel-caption-2 {
+        bottom: -6rem;
+        width: 100%;
+        height: 50%;
+    }
+}
+/* Наши услуги */
+@media only all and (max-width: 1000px) {
+    .service_name {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+@media only all and (max-width: 700px) {
+    .service_img,
+    #first img,
+    #second img,
+    #third img {
+        display: none;
+    }
+    .radio_text {
+        width: 100%;
+    }
+}
+@media only all and (max-width: 600px) {
+    .service_name {
+        font-size: 20px;
+        line-height: 21px;
+    }
+    .more_details {
+        padding-left: 0;
+    }
+    .radio_text {
+        width: 100%;
+    }
+    .service_block_btn {
+        margin: 0 auto;
+    }
+}
+@media only all and (max-width: 500px) {
+    .btn_service {
+        margin-left: 70px;
+    }
+}
+@media only all and (max-width: 400px) {
+    .menu_service li {
+        padding: 5px 5px;
+    }
+}
+/* Портфолио */
+@media only all and (max-width: 500px) {
+    .item {
+        margin: 0 auto;
+    }
+}
+/* Подарочный сертификат */
+@media only all and (max-width: 1000px) {
+    .certificate img {
+        padding-left: 30px;
+        width: 70%;
+    }
+    .certificate_text {
+        padding-right: 10px;
+    }
+    .certificate_text h2,
+    .certificate_text_2 {
+        margin-bottom: 25px;
+    }
+}
+@media only all and (max-width: 500px) {
+    .certificate {
+        display: flex;
+        flex-direction: column;
+    }
+    .certificate_text h2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .certificate_text_2 {
+        text-align: center;
+    }
+    .certificate_text_3 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .certificate img {
+        margin: 0 auto;
+    }
+    .organize_button {
+        width: 195px;
+        height: 50px;
+    }
+}
+/* Отзывы */
+@media only all and (max-width: 1000px) {
+    .block_h2_title {
+        font-size: 55px;
+        line-height: 67px;
+    }
+    .img1 {
+        max-width: 222px;
+        max-height: 308px;
+        width: 80%;
+    }
+    .reviews_text {
+        padding: 0 70px;
+    }
+    .reviews h2 {
+        line-height: 80%;
+    }
+}
+@media only all and (max-width: 700px) {
+    .carousel-222 {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        margin-top: 50px;
+    }
+}
+@media only all and (max-width: 500px) {
+    .block_reviews {
+        padding-top: 25px;
+    }
+    .block_h2_title {
+        font-size: 20px;
+    }
+    .img1 {
+        width: 98px;
+        height: 139px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .img2 {
+        width: 15%;
+    }
+    .first_reviews {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        align-items: flex-start;
+    }
+    .first_reviews div {
+        display: flex;
+        flex-direction: row;
+    }
+    .first_reviews a {
+        display: none;
+    }
+    .review_A {
+        display: block;
+        font-size: 13px;
+        text-align: end;
+    }
+    .reviews {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    .carousel-222 {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        margin-top: 0;
+    }
+    .reviews_text {
+        padding: 0 50px;
+    }
+}
+/* Расположение студии XNAILS */
+@media only all and (max-width: 1000px) {
+    .location {
+        height: 550px;
+    }
+}
+@media only all and (max-width: 500px) {
+    .location {
+        height: 850px;
+    }
+    .location h2 {
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+    .location_block {
+        flex-direction: column-reverse;
+        padding-top: 10px;
+        gap: 0;
+    }
+    .location_inform {
+        display: block;
+        text-align: center;
+    }
+    .location_text {
+        padding-bottom: 20px;
+    }
+}
+/* Подвал */
+@media only all and (max-width: 1000px) {
     footer {
         gap: 0;
         padding: 0 auto;
@@ -1412,7 +1426,7 @@ ul li {
         display: none;
     }
     .footer_foot {
-        grid-column: 1 / 4;
+        grid-column: 1 / 3;
         grid-row: 1;
         display: flex;
         flex-direction: row-reverse;
@@ -1457,9 +1471,8 @@ ul li {
         grid-column: 2;
     }
 }
-@media only all and (max-width: 500px) {
+@media only all and (max-width: 550px) {
     .footer-wrapper {
-        /* height: 415px; */
         display: flex;
         flex-direction: column;
         align-items: center;
