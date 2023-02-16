@@ -1222,7 +1222,9 @@ ul li {
     #third img {
         display: none;
     }
-    .radio_text {
+    .radio_text,
+    .description_build-up,
+    .description_pedicure {
         width: 100%;
     }
 }
@@ -1233,11 +1235,6 @@ ul li {
     }
     .more_details {
         padding-left: 0;
-    }
-    .radio_text,
-    .description_build-up,
-    .description_pedicure {
-        width: 100%;
     }
     .service_block_btn {
         margin: 0 auto;
