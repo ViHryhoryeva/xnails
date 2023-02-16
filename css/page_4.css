@@ -35,7 +35,9 @@ textarea {
     border: solid black 1px;
     width: 100%;
     margin-bottom: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5px;
 }
 .block_5 {
     text-align: end;
@@ -48,9 +50,11 @@ textarea {
 .input_ok {
     background-color: #FFFAF3;
     border: solid black 1px;
+    padding: 5px 10px;
 }
 .input_ok:focus {
-    box-shadow: 0 0 0 0.25rem #D4DCB2;
+    -webkit-box-shadow: 0 0 0 0.25rem #D4DCB2;
+            box-shadow: 0 0 0 0.25rem #D4DCB2;
 }
 .input_ok:hover {
     background-color: #D4DCB2;
@@ -60,9 +64,16 @@ textarea {
     padding: 0 5px;
 }
 .wrapper_name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .wrapper_text {
     margin: 20px 0;
@@ -72,15 +83,24 @@ textarea {
 }
 /* Звездный рейтинг */
 .wrapper_rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     margin-bottom: 25px;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 .star_rating_item {
     font-size: 2rem;
     color: #ff9800;
     cursor: pointer;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     opacity: .35;
     padding-left: 5px;
@@ -103,7 +123,8 @@ textarea {
 
 @media only all and (max-width: 900px) {
     .calendar {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
     }
     .reviews_form {
         width: 400px;

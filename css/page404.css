@@ -19,6 +19,7 @@ h1 {
     font-weight: 400;
     font-size: 200px;
     line-height: 210px;
+    background: -o-radial-gradient(20% 48%, circle closest-side, #D4DCB2, #FFFAF3);
     background: radial-gradient(circle closest-side at 20% 48%, #D4DCB2, #FFFAF3);
 }
 .block_404 a {
