@@ -225,14 +225,12 @@ h3 {
     grid-column: 1 / 5;
     grid-row: 1;
     padding-top: 80px;
-    /* order: 1; */
 }
 .text {
     grid-column: 1 / 6;
     grid-row: 2;
     font-style: italic;
     font-weight: 300;
-    /* order: 2; */
 }
 .main_1 {
     max-width: 623px;
@@ -252,12 +250,9 @@ h3 {
 .main_price {
     justify-items: start;
     align-items: center; 
-    /* display: flex;
-    flex-direction: column; */
     display: grid;
     grid-template-columns: 0.8fr 1fr;
     grid-template-rows: 0.5fr;
-    /* gap: 30px; */
 }
 .text_button {
     grid-column: 1;
@@ -271,9 +266,6 @@ h3 {
 .main_border {
     display: flex;
     flex-direction: row;
-    /* display: grid;
-    grid-template-columns: 0.15fr 0.15fr 0.15fr;
-    grid-template-rows: 1fr; */
     margin-top: 115px;
     gap: 27px;
     width: 200%;
@@ -429,14 +421,11 @@ h3 {
 .content_service > div:not(.active) > div.service_block_btn {
     display: block;
 }
-.description {
+/* .first {
     display: grid;
     grid-template-columns: 1fr 0.2fr;
     gap: 20px;
-}
-.description img {
-    width: 20%;
-}
+} */
 .btn_service {
     margin: 70px 0;
 }
@@ -603,7 +592,6 @@ h3 {
     grid-template-columns: 3fr 2fr;
     align-items: start;
     grid-template-rows: auto 1fr;
-    /* grid-auto-rows: minmax(100px, 1fr); */
 }
 .review_A {
     display: none;
@@ -671,7 +659,7 @@ h3 {
     margin-left: 20px;
 }
 .reviews_text {
-    padding: 0 70px;
+    padding: 0 75px;
 }
 /* Кнопка 'подробнее' */
 .reviews_text .read-more-radio {
@@ -1246,7 +1234,9 @@ ul li {
     .more_details {
         padding-left: 0;
     }
-    .radio_text {
+    .radio_text,
+    .description_build-up,
+    .description_pedicure {
         width: 100%;
     }
     .service_block_btn {

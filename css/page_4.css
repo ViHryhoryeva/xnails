@@ -45,9 +45,6 @@ textarea {
     margin-bottom: 0;
     height: 40px;
 }
-/* .calendar {
-    width: 205%;
-} */
 .input_ok {
     background-color: #FFFAF3;
     border: solid black 1px;
@@ -60,6 +57,7 @@ textarea {
 }
 .wrapper_reviews_part {
     width: 100%;
+    padding: 0 5px;
 }
 .wrapper_name {
     display: flex;
@@ -68,6 +66,9 @@ textarea {
 }
 .wrapper_text {
     margin: 20px 0;
+}
+.reviews_text {
+    padding: 0;
 }
 /* Звездный рейтинг */
 .wrapper_rating {
