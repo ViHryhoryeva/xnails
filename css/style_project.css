@@ -252,7 +252,7 @@ h3 {
 .block > *:nth-child(1) { 
     grid-row: 1;
     -ms-grid-row: 1; 
-    grid-column: 1;
+    grid-column: 1 / 5;
     -ms-grid-column: 1;
 }
 .block > *:nth-child(2) { -ms-grid-row: 1; -ms-grid-column: 2;
@@ -286,7 +286,7 @@ h3 {
 .block > *:nth-child(16) { -ms-grid-row: 4; -ms-grid-column: 4;
 }
 .text1 {
-    -ms-grid-column: 1;
+    -ms-grid-column: 1 / 5;
     -ms-grid-column-span: 4;
     grid-column: 1 / 5;
     -ms-grid-row: 1;
@@ -294,7 +294,7 @@ h3 {
     padding-top: 80px;
 }
 .text {
-    -ms-grid-column: 1;
+    -ms-grid-column: 1 / 6;
     -ms-grid-column-span: 5;
     grid-column: 1 / 6;
     -ms-grid-row: 2;
@@ -305,7 +305,7 @@ h3 {
 .main_1 {
     max-width: 623px;
     max-height: 641px;
-    -ms-grid-column: 3;
+    -ms-grid-column: 3 / 5;
     -ms-grid-column-span: 2;
     grid-column: 3 / 5;
     -ms-grid-row: 2;
@@ -317,7 +317,7 @@ h3 {
     text-transform: uppercase;
 }
 .flex-column {
-    -ms-grid-column: 1;
+    -ms-grid-column: 1 / 3;
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
     -ms-grid-row: 3;
@@ -565,7 +565,8 @@ h3 {
 .description_pedicure {
     width: 50%;
 }
-.radio_text_1 {
+.radio_text_1,
+.radio_text_2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -605,29 +606,29 @@ h3 {
     visibility: hidden;
 }
 /* Кнопка 'подробнее' */
-.radio_text .read-more {
+.radio_text_2 .read-more {
     display: none;
 }
-.radio_text .read-more + label + div {
+.radio_text_2 .read-more + label + div {
     display: none;
 }
-.radio_text .read-more:checked + label + div {
+.radio_text_2 .read-more:checked + label + div {
     display: block;
 }
-.radio_text .read-more + label {
+.radio_text_2 .read-more + label {
     cursor: pointer;
 }
-.radio_text .read-more:checked + label {
+.radio_text_2 .read-more:checked + label {
     display: none;
 }
-.radio_text .read-more + label + div + input + label {
+.radio_text_2 .read-more + label + div + input + label {
     display: none;
     cursor: pointer;
 }
-.radio_text .read-more:checked + label + div + input + label {
+.radio_text_2 .read-more:checked + label + div + input + label {
     display: block;
 }
-.radio_text .read-more:checked + label + div + input + label > div.radio_price div.level_1 {
+.radio_text_2 .read-more:checked + label + div + input + label > div.radio_price div.level_1 {
     padding-bottom: 100px;
 }
 /* Портфолио */
@@ -820,11 +821,17 @@ h3 {
 }
 .first_reviews a:focus,
 .first_reviews a:hover,
-.first_reviews a:active {
+.first_reviews a:active,
+.review_A:focus,
+.review_A:active,
+.review_A:hover {
     font-weight: bold;
     border-radius: 10px; 
     -webkit-box-shadow: 0 0 15px #D4DCB2; 
             box-shadow: 0 0 15px #D4DCB2;
+}
+.first_reviews a {
+    margin-right: 50px;
 }
 .block_rating {
     -ms-grid-column: 1;
@@ -1506,9 +1513,8 @@ ul li {
 }
 @media only all and (max-width: 700px) {
     .service_img,
-    #first img,
-    #second img,
-    #third img {
+    .service_photo,
+    .service_photo_2 {
         display: none;
     }
     .radio_text,
