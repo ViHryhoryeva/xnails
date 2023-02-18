@@ -249,7 +249,11 @@ h3 {
     background: -o-radial-gradient(15% 20%, circle closest-side, #D4DCB2, #FFFAF3);
     background: radial-gradient(circle closest-side at 15% 20%, #D4DCB2, #FFFAF3);
 }
-.block > *:nth-child(1) { -ms-grid-row: 1; -ms-grid-column: 1;
+.block > *:nth-child(1) { 
+    grid-row: 1;
+    -ms-grid-row: 1; 
+    grid-column: 1;
+    -ms-grid-column: 1;
 }
 .block > *:nth-child(2) { -ms-grid-row: 1; -ms-grid-column: 2;
 }
@@ -546,11 +550,6 @@ h3 {
 .content_service > div:not(.active) > div.service_block_btn {
     display: block;
 }
-/* .first {
-    display: grid;
-    grid-template-columns: 1fr 0.2fr;
-    gap: 20px;
-} */
 .btn_service {
     margin: 70px 0;
 }
@@ -586,12 +585,11 @@ h3 {
     padding-bottom: 10px;
     gap: 15px;
 }
-#first img,
-#second img {
+.service_photo {
     float: right;
     width: 25%;
 }
-#third img {
+.service_photo_2 {
     float: right;
     width: 28%;
 }
@@ -1824,7 +1822,8 @@ ul li {
         margin-top: 50px;
     }
     .icon {
-        padding-top: 20px; 
+        padding-top: 20px;
+        gap: 5px;
     }
     .wrapper_footer_menu {
         gap: 50px;
