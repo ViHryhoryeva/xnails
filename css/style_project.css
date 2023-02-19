@@ -108,6 +108,9 @@ h3 {
     text-align: center;
 }
     /* Модальное окно */
+.modal-dialog {
+    min-width: 300px;
+}
 .btn {
     color: black;
     border-radius: 0;
@@ -150,9 +153,9 @@ h3 {
 .input_submit {
     background-color: #d3d3d3;
     border: solid #6c757d 1px;
-    padding: 8px 10px;
+    padding: 6px 10px;
     position: absolute;
-    bottom: -58px;
+    bottom: -55px;
     right: 130px;
     font-size: 18px;
 }
@@ -831,7 +834,7 @@ h3 {
             box-shadow: 0 0 15px #D4DCB2;
 }
 .first_reviews a {
-    margin-right: 50px;
+    margin-right: 65px;
 }
 .block_rating {
     -ms-grid-column: 1;
@@ -1474,6 +1477,9 @@ ul li {
     .carousel-caption-2 {
         bottom: 14rem;
         height: 17%;
+    }
+    .first_reviews a {
+        margin-right: 50px;
     }
 }
 @media only all and (max-width: 500px) {
