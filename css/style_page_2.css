@@ -46,6 +46,9 @@
     list-style-type: none;
     padding: 5px 10px;
 }
+.h4_menu_title li:hover {
+    cursor: pointer;
+}
 .h4_menu_title li.active {
     border-bottom: solid #D4DCB2 2px;
 }
